@@ -13,23 +13,23 @@ namespace BaltaCourse
 
             var category = new Category();
             category.Id = Guid.NewGuid();
-            category.Title = "Amazon AWS";
+            category.Title = "Azure";
             category.Url = "Amazon.com";
             category.Description = "Destinado a AWS";
             category.Order = 8;
-            category.Summary = "AWS_CLOUD";
+            category.Summary = "Zaas";
             category.Featured = false;
 
 // SQL Injection
             var insertSql = @"INSERT INTO 
             [Category] 
                 VALUES(NEWID(),
-                    title, 
-                    url, 
-                    summary, 
-                    order, 
-                    description, 
-                    featured)";
+                    @Title, 
+                    @Url, 
+                    @Summary, 
+                    @Order, 
+                    @Description, 
+                    @Featured)";
 
             using (var connection = new SqlConnection(connectionString))
             {
@@ -45,14 +45,25 @@ namespace BaltaCourse
                 //     {
                 //         Console.WriteLine($"{reader.GetGuid(0)} - {reader.GetString(1)}");
                 //     }
+                {
+                   var rows = connection.Execute(insertSql, new{
+                        category.Id,
+                        category.Title,
+                        category.Url,
+                        category.Order,
+                        category.Summary,
+                        category.Description,
+                        category.Featured
+                    });
+                
+                    Console.WriteLine($"{rows} linhas inseridas");
 
-
-                    //Usando o Dapper
-                    var categories = connection.Query<Category>("SELECT [Id], [Title] FROM [Category]");
-                    foreach(var item in categories)
-                    {
-                        Console.WriteLine($"{category.Id} - {category.Title}");
-                    }
+                }   //Usando o Dapper
+                var categories = connection.Query<Category>("SELECT [Id], [Title] FROM [Category]");
+                foreach(var item in categories)
+                {
+                    Console.WriteLine($"{item.Id} - {item.Title}");
+                }
             
             }
 
