@@ -11,8 +11,25 @@ namespace BaltaCourse
         {
             const string connectionString = "Server=localhost,1433;Database=balta;User ID=sa;Password=1q2w3e4r@#$;Encrypt=False";
 
-             var category = new Category();
-            var insertSql = "INSERT INTO [Category] VALUES(NEWID(),title, url, summary, order, description, featured)";
+            var category = new Category();
+            category.Id = Guid.NewGuid();
+            category.Title = "Amazon AWS";
+            category.Url = "Amazon.com";
+            category.Description = "Destinado a AWS";
+            category.Order = 8;
+            category.Summary = "AWS_CLOUD";
+            category.Featured = false;
+
+// SQL Injection
+            var insertSql = @"INSERT INTO 
+            [Category] 
+                VALUES(NEWID(),
+                    title, 
+                    url, 
+                    summary, 
+                    order, 
+                    description, 
+                    featured)";
 
             using (var connection = new SqlConnection(connectionString))
             {
