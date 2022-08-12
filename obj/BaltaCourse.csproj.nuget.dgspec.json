@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Eduardo\\Git\\Orientacão a objeto\\BaltaCourse\\BaltaCourse.csproj": {}
+    "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj": {}
   },
   "projects": {
-    "C:\\Eduardo\\Git\\Orientacão a objeto\\BaltaCourse\\BaltaCourse.csproj": {
+    "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Eduardo\\Git\\Orientacão a objeto\\BaltaCourse\\BaltaCourse.csproj",
+        "projectUniqueName": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
         "projectName": "BaltaCourse",
-        "projectPath": "C:\\Eduardo\\Git\\Orientacão a objeto\\BaltaCourse\\BaltaCourse.csproj",
+        "projectPath": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
         "packagesPath": "C:\\Users\\TT - SMSA\\.nuget\\packages\\",
-        "outputPath": "C:\\Eduardo\\Git\\Orientacão a objeto\\BaltaCourse\\obj\\",
+        "outputPath": "C:\\Eduardo\\Git\\BaltaCourse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.8, )"

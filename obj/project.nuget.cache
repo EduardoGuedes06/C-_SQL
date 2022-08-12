@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rQyZa64gewFTprLzFdbEvnbtO8+hYB+qkKAuOzJdNwjXa9v+GA8iEVs4PUNCwCjMG1Pkk7q2nwTwzmAy4ilKVw==",
+  "dgSpecHash": "vGlbdGfbBpkxbXtra6PjiqSgvLeECfk2Q/H+eehQyLn3InsatsArJ9yftFV37AeKs4ATOZt9khRbz0IBpUW+Hg==",
   "success": true,
-  "projectFilePath": "C:\\Eduardo\\Git\\Orientacão a objeto\\BaltaCourse\\BaltaCourse.csproj",
+  "projectFilePath": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\TT - SMSA\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
