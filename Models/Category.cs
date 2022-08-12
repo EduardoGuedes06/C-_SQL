@@ -7,10 +7,13 @@ namespace BaltaCourse.Models
 {
     public class Category
     {
-        public Guid Codigo { get; set;}
-        public string? Titulo { get; set;}
-
-
+        public Guid Id{ get; set;}
+        public string? Title { get; set;}
+        public string? Url { get; set;}
+        public string? Summary { get; set;}
+        public string? Order { get; set;}
+        public string? Description { get; set;}
+        public string? Featured { get; set;}
 
     }
 }

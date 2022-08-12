@@ -11,6 +11,9 @@ namespace BaltaCourse
         {
             const string connectionString = "Server=localhost,1433;Database=balta;User ID=sa;Password=1q2w3e4r@#$;Encrypt=False";
 
+             var category = new Category();
+            var insertSql = "INSERT INTO [Category] VALUES(NEWID(),title, url, summary, order, description, featured)";
+
             using (var connection = new SqlConnection(connectionString))
             {
                 //connection.Open();
@@ -29,7 +32,7 @@ namespace BaltaCourse
 
                     //Usando o Dapper
                     var categories = connection.Query<Category>("SELECT [Id], [Title] FROM [Category]");
-                    foreach(var category in categories)
+                    foreach(var item in categories)
                     {
                         Console.WriteLine($"{category.Id} - {category.Title}");
                     }
