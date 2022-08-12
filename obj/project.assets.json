@@ -1798,23 +1798,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TT - SMSA\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\eduar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
+      "projectUniqueName": "D:\\Projetos\\Curso-.NET\\SQL_Dotnet_Conection\\BaltaCourse.csproj",
       "projectName": "BaltaCourse",
-      "projectPath": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
-      "packagesPath": "C:\\Users\\TT - SMSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Eduardo\\Git\\BaltaCourse\\obj\\",
+      "projectPath": "D:\\Projetos\\Curso-.NET\\SQL_Dotnet_Conection\\BaltaCourse.csproj",
+      "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\Curso-.NET\\SQL_Dotnet_Conection\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\TT - SMSA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
