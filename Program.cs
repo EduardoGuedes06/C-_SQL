@@ -27,7 +27,7 @@ namespace BaltaCourse
                 //     }
 
 
-                    //Usando o Dapper:
+                    //Usando o Dapper
                     var categories = connection.Query<Category>("SELECT [Id], [Title] FROM [Category]");
                     foreach(var category in categories)
                     {
