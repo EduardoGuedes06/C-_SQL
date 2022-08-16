@@ -1804,11 +1804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
+      "projectUniqueName": "C:\\Eduardo\\Git\\C#_SQL\\SQL_Dotnet_Conection\\BaltaCourse\\BaltaCourse.csproj",
       "projectName": "BaltaCourse",
-      "projectPath": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
+      "projectPath": "C:\\Eduardo\\Git\\C#_SQL\\SQL_Dotnet_Conection\\BaltaCourse\\BaltaCourse.csproj",
       "packagesPath": "C:\\Users\\TT - SMSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Eduardo\\Git\\BaltaCourse\\obj\\",
+      "outputPath": "C:\\Eduardo\\Git\\C#_SQL\\SQL_Dotnet_Conection\\BaltaCourse\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vGlbdGfbBpkxbXtra6PjiqSgvLeECfk2Q/H+eehQyLn3InsatsArJ9yftFV37AeKs4ATOZt9khRbz0IBpUW+Hg==",
+  "dgSpecHash": "XDg8Snx+7H0j5qWY9/YyJ9lryQ3VBs3HWR6Mz15U1Fk3niE4iwM6czBe7VbR/Fgpl9baH7z2RNNy16vd3eY2Ng==",
   "success": true,
-  "projectFilePath": "C:\\Eduardo\\Git\\BaltaCourse\\BaltaCourse.csproj",
+  "projectFilePath": "C:\\Eduardo\\Git\\C#_SQL\\SQL_Dotnet_Conection\\BaltaCourse\\BaltaCourse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
