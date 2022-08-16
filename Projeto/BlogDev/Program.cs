@@ -1,6 +1,6 @@
-﻿using System;
-using BlogDev.Models;
+﻿using BlogDev.Models;
 using System.Data.SqlClient;
+using Dapper.Contrib.Extensions;
 
 namespace BlogDev
 {
@@ -21,17 +21,16 @@ namespace BlogDev
 
         public static void ReadUsers()
         {
-            using var connection = new SqlConnection(CONNECTION_STRING)
+
+            using (var connection = new SqlConnection(CONNECTION_STRING))
             {
+                var users = connection.GetAll<User>();
 
-
-
-
-
-
-
-
-            };
+                foreach(var user in users)
+                {
+                    Console.WriteLine(user.Name);
+                }
+            }
        
 
 
