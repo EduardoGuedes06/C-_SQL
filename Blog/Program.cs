@@ -1,6 +1,6 @@
 ﻿using System;
 using Blog.Models;
-using Blog.Models.Repositories;
+using Blog.Repositories;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
@@ -20,7 +20,7 @@ namespace Blog
             //UpdateUser();
             //DeleteUser();
             // ReadUser(repository);
-            //ReadUsers();
+            ReadRoles(connection);
             //ReadWithRoles(connection);
             connection.Close();
         }
@@ -30,11 +30,31 @@ namespace Blog
         {
             var repository = new UserRepository(connection);
             var users = repository.Get();
+
+
+
          
             foreach (var user in users)
                 Console.WriteLine(user.Name);
             
         }
+        static void ReadRoles(SqlConnection connection)
+        {
+            var repository = new RoleRepository(connection);
+            var roles = repository.Get();
+
+            foreach (var role in roles)
+                Console.WriteLine(role.Name);
+
+        }
+
+
+
+
+
+
+
+
 
         static void ReadUser()
         {
