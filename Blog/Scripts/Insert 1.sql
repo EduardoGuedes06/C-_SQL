@@ -1,0 +1,1 @@
+INSERT INTO [User] Values ('Pablo','eduardoguedeslibra@gmail.com','HASH1','JAVA','site','pablo')
