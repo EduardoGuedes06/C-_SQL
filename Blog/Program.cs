@@ -1,132 +1,66 @@
 ﻿using System;
 using Blog.Models;
 using Blog.Repositories;
-using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
 namespace Blog
 {
-
-    class ProgramS
+    class Program
     {
-        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=Blog;User ID=sa;Password=1q2w3e4r@#$;Encrypt=False";
-
+        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=Blog;User ID=sa;Password=1q2w3e4r@#$";
 
         static void Main(string[] args)
         {
-            var connection = new SqlConnection(CONNECTION_STRING);
-            connection.Open();
-            //CreateUser();
-            //UpdateUser();
-            //DeleteUser();
+            using var connection = new SqlConnection(CONNECTION_STRING);
+            var repository = new Repository<User>(connection);
+
+            // CreateUser(repository);
+            // UpdateUser(repository);
+            // DeleteUser(repository);
             // ReadUser(repository);
-            ReadRoles(connection);
+            ReadUsers(repository);
             //ReadWithRoles(connection);
-            connection.Close();
         }
 
 
-        static void ReadUsers(SqlConnection connection)
+        private static void ReadUsers(Repository<User> repository)
+        {
+            var users = repository.Read();
+            foreach (var item in users)
+                Console.WriteLine(item.Email);
+        }
+
+        private static void ReadUser(Repository<User> repository)
+        {
+            var user = repository.Read(2);
+            Console.WriteLine(user?.Email);
+        }
+
+        private static void UpdateUser(Repository<User> repository)
+        {
+            var user = repository.Read(2);
+            user.Email = "hello@balta.io";
+            repository.Update(user);
+
+            Console.WriteLine(user?.Email);
+        }
+
+        private static void DeleteUser(Repository<User> repository)
+        {
+            var user = repository.Read(2);
+            repository.Delete(user);
+        }
+
+        private static void ReadWithRoles(SqlConnection connection)
         {
             var repository = new UserRepository(connection);
-            var users = repository.Get();
+            var users = repository.ReadWithRole();
 
-
-
-         
             foreach (var user in users)
-                Console.WriteLine(user.Name);
-            
-        }
-        static void ReadRoles(SqlConnection connection)
-        {
-            var repository = new RoleRepository(connection);
-            var roles = repository.Get();
-
-            foreach (var role in roles)
-                Console.WriteLine(role.Name);
-
-        }
-
-
-
-
-
-
-
-
-
-        static void ReadUser()
-        {
-            using (var connection = new SqlConnection(CONNECTION_STRING))
             {
-                var user = connection.Get<User>(1); 
-                Console.WriteLine(user.Name);
-                
+                Console.WriteLine(user.Email);
+                foreach (var role in user.Roles) Console.WriteLine($" - {role.Slug}");
             }
         }
-
-        static void CreateUser()
-        {
-            var user = new User()
-            {
-            Name = "Amanda",
-            Email = "AmandaLuiza@gmail.com",
-            PasswordHash = "HASH",
-            Bio = "Equipe-Balta.io",
-            Image = "https://...",
-            Slug = "equipe-balta"
-            };
-
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                connection.Insert<User>(user);
-
-                Console.WriteLine("Cadastro Realizado");
-                
-            }
-        }
-
-        static void UpdateUser()
-        {
-            var user = new User()
-            {
-                Id = 9,
-                Name = "Amanda Luiza",
-                Email = "AmandaLuiza@gmail.com",
-                PasswordHash = "HASH",
-                Bio = "Equipe-Balta.io",
-                Image = "https://...",
-                Slug = "equipe-balta"
-            };
-
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                connection.Update<User>(user);
-
-                Console.WriteLine("Atualização de cadastro de "+user.Name+ " Realizado");
-
-            }
-        }
-
-        static void DeleteUser()
-        {
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                var user = connection.Get<User>(8);
-                connection.Delete<User>(user);
-
-                Console.WriteLine("Decadastro Realizado do usuario: ");
-
-            }
-        }
-
-
-
-
-
-
     }
-
-
 }
